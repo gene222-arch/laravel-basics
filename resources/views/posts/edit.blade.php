@@ -11,15 +11,16 @@
     2. set the action and method
     3. add the token for security --}}
 
-    {{-- <h1>{{ $hello }}</h1> --}}
-    {{-- {{ $name }} --}}
-
     <form action="/posts/{{ $post->id }}" method="post">
         @csrf
         @method('PUT')
 
+        <label for="">Title</label>
         <input type="text" name="title" value="{{ $post->title }}">
+
+        <label for="">Body</label>
         <input type="text" name="body" value="{{ $post->body }}">
+
         <button type="submit">Update</button>
     </form>
 </body>

@@ -9,7 +9,7 @@ class Post extends Model
 {
     use HasFactory;
 
-    public string $name;
+    public string $name ='asdasd';
     public int $age;
 
     /**

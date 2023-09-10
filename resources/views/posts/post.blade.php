@@ -10,10 +10,10 @@
 <body>
     <article>
         <h1 class="title">
-            {{ $blogPost['id'] }}
-            {{ $blogPost['title'] }}
+            {{ $post->id }}
+            {{ $post->title }}
         </h1>
-        <p class="body">{{ $blogPost['body'] }}</p>
+        <p class="body">{{ $post->body }}</p>
     </article>
     <a href="/posts">Back</a>
 </body>

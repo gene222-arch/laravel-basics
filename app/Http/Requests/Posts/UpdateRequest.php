@@ -22,7 +22,7 @@ class UpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => ['required', 'string', 'min:5'],
+            'title' => ['required', 'string', 'min:5', "unique:posts,title,{$this->post->id}"],
             'body'  => ['required', 'string', 'min:10']
         ];
     }
